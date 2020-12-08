@@ -61,14 +61,14 @@
 			<artifactId>auto_util</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/auto_util.jar</systemPath>
+			<systemPath>${pom.basedir}/lib/auto_util.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>rimac.api</groupId>
 			<artifactId>auto_app_apivida_test</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/auto_app_apivida_test.jar</systemPath>
+			<systemPath>${pom.basedir}/lib/auto_app_apivida_test.jar</systemPath>
 		</dependency>
 
 
