@@ -148,6 +148,8 @@
 				<version>2.20</version>
 				<configuration>
 					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<useSystemClassLoader>false</useSystemClassLoader>
+    				<threadCount>1</threadCount>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
 						<include>**/**Rimac**.java</include>
