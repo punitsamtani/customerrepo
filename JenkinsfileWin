@@ -58,5 +58,12 @@ pipeline {
                 }
             }
         }
+        
+        stage('Upload Result to QTM'){
+	       step([$class: 'QTMReportPublisher', disableaction:false, qtmUrl: 'https://testmanagement.qmetry.com/', automationFramework: 'JUNIT', automationHierarchy: '2', testResultFilePath: '/target/site/serenity', qtmAutomationApiKey: 'EumgSTbeqx3sA3eGCjlWb8BJ8gmGykQqf5yZxaqB', project : '5658', release: 'Primer Release', cycle: 'Ciclo 1', buildName: 'testBuild1', platformName: 'Jenkins', testSName: 'junit pipeline', proxyUrl:'', testSuiteName: ''     
+	       testcaseFields: '{"description":"Automated Test case", "testCaseType":"Automated", "testCaseState":"Open", "component":["BackEnd"], "priority":"Blocker", "testcaseOwner":"Christian.Maury", "estimatedTime":"143", "userDefinedFields" : {"Integrate" : "Custom Field Testcase"}}',
+	       testsuiteFields: '{"description":"Automated Test suite", "testsuiteOwner": "Christian.Maury", "testSuiteState": "New", "userDefinedFields": {"Integrate" : "Custom Field Testsuite"}}', skipWarning: '0'])   
+	    }
+        
     }
 }
