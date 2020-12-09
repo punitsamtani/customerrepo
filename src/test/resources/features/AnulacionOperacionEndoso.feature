@@ -1,7 +1,8 @@
 @tag
 Feature: Anular operación de endoso
 
-  @requerimentKey=PRYQS-2
+  @requerimentKey=PSAS-RQ-2
+  @testEntityKey=PSAS-TC-2
   @AnularOperacionEndoso @Regresion
   Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
     Given accedo al servicio de cotizacion
