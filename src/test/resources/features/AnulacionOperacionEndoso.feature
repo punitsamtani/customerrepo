@@ -1,6 +1,7 @@
 @tag
 Feature: Anular operación de endoso
 
+  @requerimentKey=PRYQS-2
   @AnularOperacionEndoso @Regresion
   Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
     Given accedo al servicio de cotizacion
