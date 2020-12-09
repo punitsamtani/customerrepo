@@ -1,7 +1,7 @@
 @tag
 Feature: Anular operación de endoso
 
-  @cotizacionFlexivida4 @Regresion
+  @AnularOperacionEndoso @Regresion
   Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
     Given accedo al servicio de cotizacion
     When ingreso los datos del plan "<ideProd>", "<idePlan>", "<idpMoneda>"
