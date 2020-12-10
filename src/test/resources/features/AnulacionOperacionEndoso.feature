@@ -1,8 +1,7 @@
-@tag
 Feature: Anular operación de endoso
 
-  @cotizacionFlexivida4 @Regresion
-  Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
+  @requirementKey=PSAS-RQ-2
+  Scenario Outline: Anular Operacion Endoso
     Given accedo al servicio de cotizacion
     When ingreso los datos del plan "<ideProd>", "<idePlan>", "<idpMoneda>"
     And ingreso los datos del usuario "<ideVendedor>", "<ideCanal>", "<ideUsuario>"
@@ -12,8 +11,6 @@ Feature: Anular operación de endoso
     And ingreso los componentes de los asegurados
     And realizo la cotizacion del producto Flexivida
     Then se muestra la prima neta y el numero de cotizacion y el tipo de renta
-
-    ###DATOS###@DataPrueba|1@04-SimularCotizacion
     Examples: 
       |0|ideProd|idePlan|idpMoneda|ideVendedor|ideCanal|ideUsuario|codRamo|nombre|descripcion|ideTipoRelTer|nombreDPAseg|descripcionDPAseg|PrimaNeta|NumCotizacion|TipoRenta|TipoRentaEsperado|
       |1|106481|532603|SOL|768612805|449658888|VVIRTUAL|GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL|SumaAsegurada,IngresoMensual,SituacionLaboral,DuracionPoliza,DuracionInversionSC,TipoRiesgo,OcupacionInv,RequiereFactura|660001,50000,Independiente,39,39,Estándar,Abogado,NO|134|FechaNacimiento,Sexo|2002-01-11,M|1677.8087449687505|9ccf3c1e-d3f6-4f07-93e0-555af6aa5946|Alta|Alta|
