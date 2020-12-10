@@ -21,13 +21,14 @@ pipeline {
                 bat ("mvn clean verify")
             }
         }
-        
+                
         stage ('Ejecutar Pruebas') {
         	steps {
         		script {
         			try {
         				//sh ("mvn verify package -P Rimac")
-        				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
+        				//bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
+        				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --format=json:${WORKSPACE}/target/site/serenity/result.json --glue rimac\"")
         				bat ("mvn serenity:aggregate")
         				echo 'Ejecucion de pruebas sin errores...'
         			}
