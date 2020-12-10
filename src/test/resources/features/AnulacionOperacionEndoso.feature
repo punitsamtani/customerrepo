@@ -4,7 +4,7 @@ Feature: Anular operación de endoso
   @requerimentKey=PSAS-RQ-2
   @testEntityKey=PSAS-TC-2
   @AnularOperacionEndoso @Regresion
-  Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
+  Scenario Outline: Anular operación de endoso
     Given accedo al servicio de cotizacion
     When ingreso los datos del plan $<ideProd>, $<idePlan>, $<idpMoneda>
     And ingreso los datos del usuario $<ideVendedor>, $<ideCanal>, $<ideUsuario>
