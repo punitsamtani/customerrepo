@@ -6,11 +6,11 @@ Feature: Anular operación de endoso
   @AnularOperacionEndoso @Regresion
   Scenario Outline: Anular operación de endoso
     Given accedo al servicio de cotizacion
-    When ingreso los datos del plan $<ideProd>, $<idePlan>, $<idpMoneda>
-    And ingreso los datos del usuario $<ideVendedor>, $<ideCanal>, $<ideUsuario>
-    And ingreso los datos particulares $<codRamo>,$<nombre>,$<descripcion>
-    And ingreso los datos del parentesco $<ideTipoRelTer>
-    And ingreso los datos particulares de los asegurados $<nombreDPAseg>,$<descripcionDPAseg>
+    When ingreso los datos del plan "<ideProd>", "<idePlan>", "<idpMoneda>"
+    And ingreso los datos del usuario "<ideVendedor>", "<ideCanal>", "<ideUsuario>"
+    And ingreso los datos particulares "<codRamo>","<nombre>","<descripcion>"
+    And ingreso los datos del parentesco "<ideTipoRelTer>"
+    And ingreso los datos particulares de los asegurados "<nombreDPAseg>","<descripcionDPAseg>"
     And ingreso los componentes de los asegurados
     And realizo la cotizacion del producto Flexivida
     Then se muestra la prima neta y el numero de cotizacion y el tipo de renta
