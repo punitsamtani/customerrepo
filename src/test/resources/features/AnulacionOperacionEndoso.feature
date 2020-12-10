@@ -4,7 +4,7 @@ Feature: Anular operación de endoso
   @requirementKey=PSAS-RQ-2
   @testEntityKey=PSAS-TC-2
   @AnularOperacionEndoso @Regresion
-  Scenario Outline: TC001 - Anular Operacion Endoso
+  Scenario Outline: Anular Operacion Endoso
     Given accedo al servicio de cotizacion
     When ingreso los datos del plan "<ideProd>", "<idePlan>", "<idpMoneda>"
     And ingreso los datos del usuario "<ideVendedor>", "<ideCanal>", "<ideUsuario>"
