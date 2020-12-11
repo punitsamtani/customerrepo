@@ -66,6 +66,7 @@ Feature: Poder realizar cotizaciones para la línea de negocios VIDA
       |4|106481|532603|SOL|768612805|449658888|VVIRTUAL|GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL,GENERAL|SumaAsegurada,IngresoMensual,SituacionLaboral,DuracionPoliza,DuracionInversionSC,TipoRiesgo,OcupacionInv,RequiereFactura|400000,5000,Independiente,39,39,Estándar,Abogado,NO|134|FechaNacimiento,Sexo|2002-01-11,M|15887,15891,15893,15000|COVSumaAsegurada,COVSumaAsegurada,COVSumaAsegurada|60000,350,5000|135|FechaNacimiento,Sexo|2000-01-11,F|15892,15887|COVSumaAsegurada,COVSumaAsegurada|10000,200000|2302.714190006518|2d8050dd-84a0-4ef9-bced-7150294b5951||||
 
   @cotizacionFlexivida4 @Regresion
+  @requirementKey=PSAS-RQ-2
   Scenario Outline: 4-Validar los tipos de renta vs la prima mostrada
     Given accedo al servicio de cotizacion
     When ingreso los datos del plan "<ideProd>", "<idePlan>", "<idpMoneda>"
