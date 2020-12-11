@@ -28,7 +28,7 @@ pipeline {
         			try {
         				//sh ("mvn verify package -P Rimac")
         				//bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
-        				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --plugin=json:${WORKSPACE}/target/site/serenity/result.json --glue rimac\"")
+        				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --format=json:target/site/serenity/result.json --glue rimac\"")
         				bat ("mvn serenity:aggregate")
         				echo 'Ejecucion de pruebas sin errores...'
         			}
@@ -60,13 +60,13 @@ pipeline {
             }
         }
         
-	    stage('Upload Result to QTM'){
-	    	steps {
-				step([$class: 'QTMReportPublisher', disableaction:false, qtmUrl: 'https://testmanagement.qmetry.com/', automationFramework: 'CUCUMBER', automationHierarchy: '2', testResultFilePath: '/target/site/serenity', qtmAutomationApiKey: 'EumgSTbeqx3sA3eGCjlWb8BJ8gmGykQqf5yZxaqB', project : '5658', release: 'Primer Release', cycle: 'Ciclo 1', buildName: 'testBuild1', platformName: 'No Platform', testSName: 'Testsuite_summary', proxyUrl:'', testSuiteName: '',   
-				testcaseFields: '{"description":"Automated Test case", "testCaseType":"Automated", "testCaseState":"Open", "component":["Not Available"], "priority":"Blocker", "testcaseOwner":"Christian.Maury", "estimatedTime":"143", "userDefinedFields" : {"Custom_Filed_Name" : "Custom Testcase Value"}}',
+	    //stage('Upload Result to QTM'){
+	    //	steps {
+		//		step([$class: 'QTMReportPublisher', disableaction:false, qtmUrl: 'https://testmanagement.qmetry.com/', automationFramework: 'CUCUMBER', automationHierarchy: '2', testResultFilePath: '/target/site/serenity', qtmAutomationApiKey: 'EumgSTbeqx3sA3eGCjlWb8BJ8gmGykQqf5yZxaqB', project : '5658', release: 'Primer Release', cycle: 'Ciclo 1', buildName: 'testBuild1', platformName: 'No Platform', testSName: 'Testsuite_summary', proxyUrl:'', testSuiteName: '',   
+		//		testcaseFields: '{"description":"Automated Test case", "testCaseType":"Automated", "testCaseState":"Open", "component":["Not Available"], "priority":"Blocker", "testcaseOwner":"Christian.Maury", "estimatedTime":"143", "userDefinedFields" : {"Custom_Filed_Name" : "Custom Testcase Value"}}',
 				testsuiteFields: '{"description":"Automated Test suite", "testsuiteOwner": "Christian.Maury", "testSuiteState": "New", "userDefinedFields": {"Integrate" : "Custom Field Testsuite"}}', skipWarning: '0']) 
-	    	}
-	    }
+	    // 	}
+	    //}
         
     }
 }
