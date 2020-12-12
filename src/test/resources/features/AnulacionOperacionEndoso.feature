@@ -1,5 +1,6 @@
 Feature: Anular operación de endoso
 
+  @AnularOperacionEndoso
   @requirementKey=PSAS-RQ-2
   Scenario Outline: Anular Operacion Endoso
     Given accedo al servicio de cotizacion
