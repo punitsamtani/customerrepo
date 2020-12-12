@@ -67,6 +67,7 @@ pipeline {
 				testsuiteFields: '{"description":"Automated Test suite", "testsuiteOwner": "Christian.Maury", "testSuiteState": "New", "userDefinedFields": {"Integrate" : "Custom Field Testsuite"}}', skipWarning: '0']) 
 	     	}
 	    }
+	    
         
     }
 }

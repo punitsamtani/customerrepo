@@ -70,6 +70,13 @@
 			<scope>system</scope>
 			<systemPath>${pom.basedir}/lib/auto_app_apivida_test.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>rimac.app</groupId>
+			<artifactId>auto_app_crm_ws</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${pom.basedir}/lib/auto_app_crm_ws.jar</systemPath>
+		</dependency>
 
 
 		<dependency>
