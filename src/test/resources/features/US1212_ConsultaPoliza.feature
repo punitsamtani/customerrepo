@@ -17,4 +17,4 @@ Feature: Realizar Consulta de Póliza Vehicular - nivel API
   Scenario: Realizar consulta de servicio
     Given realizo la configuracion del request con los siguientes campos "nombre" y "apellido"
     When envio mi solicitud
-    Then Recibo una respuesta con la data esperada
+    Then Recibo una respuesta con la data esperada1
