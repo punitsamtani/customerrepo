@@ -1,7 +1,6 @@
 Feature: Realizar Consulta de Póliza Vehicular - nivel API
 
-  @ConsultaAnulacionPolizaxWS
-  @requirementKey=PSAS-RQ-3
+
   Scenario Outline: Validar estado de consulta
     Given realizo la configuracion del request con los siguientes campos "<nombre>" y "<descripcion>"
     When envio mi request
